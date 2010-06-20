@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>JavaScript Implementation of Madryga Encryption</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="madryga.css" />
+    <script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="madryga.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+<div id="header" class="header">
+    <h1>JavaScript Implementation of Madrygra Encryption</h1>
+</div>
+<div id="encr-form" class="content-main">
+    <form name="madryga-form" id="madryga-form" action="#">
+        <p id="encr-decr-area">
+        <span class="spacer">
+            <label for="encrypt">Encryption</label>
+            <input type="radio" name="encr-decr" value="encrypt" id="encrypt" 
+            checked="true"/>
+        </span>
+        <span class="spacer">
+            <label for="decrypt">Decryption</label>
+            <input type="radio" name="encr-decr" value="decrypt" id="decrypt" />
+        </span>
+        </p>
+        <table class="input-table">
+            <tr>
+                <td>
+                    <label for="encrInput" id="input-label" class="label-input">Plaintext</label>
+                </td>
+                <td>
+                    <textarea rows="10" cols="100" name="encrInput" id="encrInput" class="clearable text">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="key" id="key-label" class="label-input">Key</label>
+                </td>
+                <td>
+                    <input cols="100" name="key" id="key" class="text" />
+                </td>
+            </tr>
+            <tr class="output">
+                <td>
+                    <label for="output" id="output-label" class="label-input">Output</label>
+                </td>
+                <td>
+                    <textarea rows="10" cols="100" name="output" id="output" class="clearable text">
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+        <button type="button" name="submit" id="submit1">
+            Encrypt
+        </button>
+    </form>
+</div>
+<div id="scratch">
+</div>
+</div>
+</body>
+</html>
