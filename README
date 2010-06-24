@@ -2,8 +2,10 @@ This is a JavaScript implementation of the little-used Madryga encryption
 algorithm in ECB mode.  It includes 64-bit integer support.  jQuery is used in 
 the example code, but is not required for the encryption code itself.
 
-This was a project for a course in cryptography and was not intended for 
-production use.
+This was done as a learning exercise and is not intended for production use.
+
+NOTE: I didn't write the base64 encoding functions. Those were taken from
+http://www.webtoolkit.info/javascript-base64.html
 
 **************************************************************************
 
