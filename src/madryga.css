@@ -169,3 +169,13 @@ table.input-table {
 .text {
     width: 99%;
 }
+
+.hint {
+    font-style: italic;
+    font-size: 9pt;
+}
+
+#decr-hint {
+	padding: 0px 0px 0px 4px;
+    display: none;
+}

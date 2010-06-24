@@ -1,6 +1,14 @@
 This is a JavaScript implementation of the little-used Madryga encryption 
-algorithm.  It includes 64-bit integer support.  jQuery is used in the 
-example code, but is not required for the encryption code itself.
+algorithm in ECB mode.  It includes 64-bit integer support.  jQuery is used in 
+the example code, but is not required for the encryption code itself.
 
 This was a project for a course in cryptography and was not intended for 
 production use.
+
+**************************************************************************
+
+SAMPLE PAGE USAGE
+
+The program has two modes of operation: encryption and decryption.  To encrypt a piece of text, enter the text into the Plaintext text area, provide a key in the key input, and press the Encrypt button.  The ciphertext will be displayed in a text box below the key, encoded in Base64.  Because web browsers only support text display, the binary output of the algorithm is displayed in Base64 encoding.
+
+After encrypting a piece of plaintext, switch to decryption mode by clicking on the Decryption radio button at the top of the page.  The Base64-encoded ciphertext will be placed in the Ciphertext box now on the top of the page.  You may also enter any other Madryga-encrypted text into the Ciphertext box to decrypt, but it MUST be Base64-encoded.  Once the ciphertext and key have been entered, click the Decrypt button on the bottom of the page.  The original plaintext should be displayed in a text area at the bottom of the page.

@@ -1,16 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>JavaScript Implementation of Madryga Encryption</title>
     <link rel="stylesheet" type="text/css" media="screen" href="madryga.css" />
     <script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="encodings.js" type="text/javascript"></script>
     <script src="madryga.js" type="text/javascript"></script>
+    <script src="formhandling.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="container">
 <div id="header" class="header">
-    <h1>JavaScript Implementation of Madrygra Encryption</h1>
+    <h1>JavaScript Implementation of Madryga Encryption</h1>
 </div>
 <div id="encr-form" class="content-main">
     <form name="madryga-form" id="madryga-form" action="#">
@@ -25,10 +27,15 @@
             <input type="radio" name="encr-decr" value="decrypt" id="decrypt" />
         </span>
         </p>
+        <span class="hint" id="decr-hint">
+            Ciphertext input MUST be in Base64 encoding
+        </span>
         <table class="input-table">
             <tr>
                 <td>
                     <label for="encrInput" id="input-label" class="label-input">Plaintext</label>
+                    <span class="hint" id="input-hint">
+                    </span>
                 </td>
                 <td>
                     <textarea rows="10" cols="100" name="encrInput" id="encrInput" class="clearable text">
@@ -40,7 +47,29 @@
                     <label for="key" id="key-label" class="label-input">Key</label>
                 </td>
                 <td>
+                    <span style="font-style: italic;" class="key-hint">
+                        Choose key input format:
+                    </span>
+                    &nbsp;
+                    <label for="key-type-ascii" id="key-label-ascii" class="label-key">
+                        ASCII (8 bits / character)
+                    </label>
+                    <input type="radio" name="key-type" value="key-type-ascii" 
+                        id="key-type-ascii" checked="true" /> 
+                    &nbsp;
+                    <label for="key-type-hex" id="key-label-hex" class="label-key">Hex</label>
+                    <input type="radio" name="key-type" value="key-type-hex" id="key-type-hex"/> 
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
                     <input cols="100" name="key" id="key" class="text" />
+                    <p>
+                    <span class="hint">
+                        Key value must be 64 bits, either in hex or 8-byte per character text
+                    </span>
+                    </p>
                 </td>
             </tr>
             <tr class="output">
