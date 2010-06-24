@@ -1,0 +1,6 @@
+This is a JavaScript implementation of the little-used Madryga encryption 
+algorithm.  It includes 64-bit integer support.  jQuery is used in the 
+example code, but is not required for the encryption code itself.
+
+This was a project for a course in cryptography and was not intended for 
+production use.
